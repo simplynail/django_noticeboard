@@ -1,0 +1,25 @@
+"""simplynail_apps URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/1.11/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.conf.urls import url, include
+    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
+"""
+from django.conf.urls import url
+from django.views.generic import TemplateView
+
+from . import views
+
+urlpatterns = [	
+	url(r'^$', views.Index.as_view(), name='index'),
+	#url(r'^inputs/(?P<system_type>[a-z]*)', views.Inputs.as_view(), name='inputs'),
+	#url(r'^results/(?P<uid>[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})/(?P<details>[a-z]*)', views.ResultsOverview.as_view(), name='results')
+]

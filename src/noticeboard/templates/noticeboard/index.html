@@ -1,0 +1,38 @@
+{% extends "noticeboard/bricks/base.html" %}
+
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block main %}
+<div class="container-fluid">
+    <!--Grid row-->
+    <div class="row">
+        <!--Grid column-->
+        <div class="col-md-4">
+            <div class="card m-1">
+            {% with header="Administracja" %}
+            {% include 'noticeboard/bricks/two-pins-five-inline.html' %}
+            {% endwith %}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card m-1">
+            {% with header="Zarząd" %}
+            {% include 'noticeboard/bricks/two-pins-five-inline.html' %}
+            {% endwith %}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card m-1">
+            {% with header="Mieszkańcy" %}
+            {% include 'noticeboard/bricks/two-pins-five-inline.html' %}
+            {% endwith %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}

@@ -1,0 +1,57 @@
+{% extends "project/index.html" %}
+
+{% load static %}
+
+{% block content %}
+    <!--Main Navigation-->
+    <header>
+    <!--Navbar-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark orange scrolling-navbar">
+        <a class="navbar-brand" href="#"><i class="fa fa-home" aria-hidden="true"></i><strong> WM Biruty8</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Główna <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Administracja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Zarząd</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mieszkańcy</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-id-card-o" aria-hidden="true"></i>Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-lock" aria-hidden="true"></i>Wyloguj</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar-->
+    </header>
+    <!-- /Main Navigation-->
+
+    <!--Main layout-->
+    <main>
+        <div class="main-wrapper" style="padding-top: 100px">
+            {% block main %}
+            {% endblock main %}
+        </div>
+    </main>
+    <!-- /Main layout-->
+
+    <!--Footer-->
+    <footer>
+
+    </footer>
+    <!--Footer-->
+{% endblock content %}
